@@ -1,5 +1,6 @@
 {
   "version": "0.0.0-development",
+  "name": "update-function-types",
   "main": "index.js",
   "scripts": {
     "test": "mocha --require=ts-node/register test/*.ts",
