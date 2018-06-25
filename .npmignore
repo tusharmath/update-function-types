@@ -3,3 +3,6 @@
 !*.js
 *.tgz
 test/
+.prettierrc
+.idea/
+*.yml
