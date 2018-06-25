@@ -1,0 +1,6 @@
+node_modules/
+*.tgz
+*.js
+*.map
+tsconfig.json
+.idea/
