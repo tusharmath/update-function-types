@@ -60,8 +60,8 @@
     url-join "^4.0.0"
 
 "@semantic-release/npm@^3.2.0":
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/@semantic-release/npm/-/npm-3.3.1.tgz#0b08b5a691144e9311e7ebfce5b94b13387d9b98"
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@semantic-release/npm/-/npm-3.3.2.tgz#a47634b4df4074a420d763dc2f341063da71ddd8"
   dependencies:
     "@semantic-release/error" "^2.2.0"
     aggregate-error "^1.0.0"
@@ -73,7 +73,7 @@
     nerf-dart "^1.0.0"
     normalize-url "^3.0.0"
     parse-json "^4.0.0"
-    read-pkg "^3.0.0"
+    read-pkg "^4.0.0"
     registry-auth-token "^3.3.1"
 
 "@semantic-release/release-notes-generator@^6.0.0":
@@ -99,8 +99,8 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.3.tgz#11f3a5629d67cd444fa6c94536576244e6a52ea9"
 
 "@types/node@^10.3.5":
-  version "10.3.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.3.5.tgz#8423cdf6e6fb83433e489900d7600d3b61c8260c"
+  version "10.3.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.3.6.tgz#ea8aab9439b59f40d19ec5f13b44642344872b11"
 
 JSONStream@^1.0.4:
   version "1.3.3"
@@ -110,8 +110,8 @@ JSONStream@^1.0.4:
     through ">=2.2.7 <3"
 
 action-type@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/action-type/-/action-type-1.1.1.tgz#d142c18034d7330a2dde495c6399f1ec42ac5f3d"
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/action-type/-/action-type-1.3.0.tgz#11dcf78b6cd35de835ff29a648152dc4431805d8"
   dependencies:
     ts-curry "^1.0.0"
 
@@ -1611,8 +1611,8 @@ hook-std@^1.0.1:
   resolved "https://registry.yarnpkg.com/hook-std/-/hook-std-1.0.1.tgz#fc91e6836c5b174f405dc4b57aa2228e4c599981"
 
 hosted-git-info@^2.1.4, hosted-git-info@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.0.tgz#23235b29ab230c576aab0d4f13fc046b0b038222"
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.6.1.tgz#6e4cee78b01bb849dcf93527708c69fdbee410df"
 
 http-cache-semantics@3.8.1:
   version "3.8.1"
@@ -2518,8 +2518,8 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
 
 prettier@^1.13.5:
-  version "1.13.5"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.5.tgz#7ae2076998c8edce79d63834e9b7b09fead6bfd0"
+  version "1.13.6"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.6.tgz#00ae0b777ad92f81a9e7a1df2f0470b6dab0cb44"
 
 private@^0.1.6, private@^0.1.8:
   version "0.1.8"
@@ -2583,6 +2583,14 @@ read-pkg@^3.0.0:
     load-json-file "^4.0.0"
     normalize-package-data "^2.3.2"
     path-type "^3.0.0"
+
+read-pkg@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-4.0.1.tgz#963625378f3e1c4d48c85872b5a6ec7d5d093237"
+  dependencies:
+    normalize-package-data "^2.3.2"
+    parse-json "^4.0.0"
+    pify "^3.0.0"
 
 readable-stream@^2.0.0, readable-stream@^2.0.2, readable-stream@^2.1.5:
   version "2.3.6"
