@@ -14,6 +14,8 @@ Essentially there are two kinds of update functions —
 - [Library Functions](#library-functions)
   - [concatR](#concatr)
   - [concatC](#concatc)
+  - [matchR](#matchr)
+  - [matchC](#matchc)
 
 # Types
 
@@ -82,4 +84,44 @@ const C0 = (a, b) => action('+', a + b)
 const C1 = (a, b) => action('*', a * b)
 
 concatC(C0, C1)(10, 500) // List(action('+', 510), action('B', 5000))
+```
+
+## matchR
+
+1.  Takes in specification object with keys as action types and values as `ReducerFunction`(s) and returns another `ReducerFunction`.
+2.  The returned function when called with an `Action` and `State` internally calls the function matching the action's type.
+3.  The matching reducer function is called with value of the original action and the state is passed as is.
+4.  In case no action matches the given specification the original state is returned.
+
+**Usage**
+
+```ts
+import {matchR} from 'update-function-type'
+
+const reducer = matchR({
+  add: (a, b) => a + b,
+  mul: (a, b) => a * b
+})
+
+reducer(action('add', 10), 1000) // returns 1010
+```
+
+## matchC
+
+1.  Takes in specification object with keys as action types and values as `CommandFunction`(s) and returns another `CommandFunction`.
+2.  The returned function when called with an `Action` and `State` internally calls the function matching the action's type.
+3.  The matching reducer function is called with value of the original action and the state is passed as is.
+4.  In case no action matches the given specification [Nil] is returned.
+
+**Usage**
+
+```ts
+import {matchC} from 'update-function-type'
+
+const reducer = matchR({
+  add: (a, b) => action('added', a + b),
+  mul: (a, b) => action('multiplied', a * b)
+})
+
+reducer(action('add', 10), 1000) // returns action('added', 1010)
 ```
