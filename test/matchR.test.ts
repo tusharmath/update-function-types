@@ -3,12 +3,12 @@
  */
 
 import * as assert from 'assert'
-import {matchActionR} from '../src/matchActionR'
+import {matchR} from '../src/matchR'
 import {action} from 'action-type'
 
-describe('matchActionR', () => {
-  it('should call the most matching update function', () => {
-    const actual = matchActionR({
+describe('matchR', () => {
+  it('should call the matching update function', () => {
+    const actual = matchR({
       add: (a: number, b: number) => a + b,
       mul: (a: number, b: number) => a * b
     })(action('add', 10), 20)
@@ -18,7 +18,7 @@ describe('matchActionR', () => {
   })
 
   it('should return original state', () => {
-    const actual = matchActionR({
+    const actual = matchR({
       add: (a: number, b: number) => a + b,
       mul: (a: number, b: number) => a * b
     })(action('div', 10), 20)
@@ -28,7 +28,7 @@ describe('matchActionR', () => {
   })
 
   it('should be curried', () => {
-    const actual = matchActionR({
+    const actual = matchR({
       add: (a: number, b: number) => a + b,
       mul: (a: number, b: number) => a * b
     })(action('add', 10))(20)

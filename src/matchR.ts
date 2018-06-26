@@ -9,7 +9,7 @@ export type MatchActionRSpec<State> = {
   [key: string]: ReducerFunction<any, State>
 }
 
-export const matchActionR = <State>(spec: MatchActionRSpec<State>) =>
+export const matchR = <State>(spec: MatchActionRSpec<State>) =>
   curry2<Action<any>, State, State>(
     (action: Action<any>, state: State) =>
       spec[action.type] ? spec[action.type](action.value, state) : state
