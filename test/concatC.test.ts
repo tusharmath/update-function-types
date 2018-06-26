@@ -22,7 +22,7 @@ describe('concatC', () => {
       (a: number, b: number) => action('+', a + b),
       (a: number, b: number) => action('*', a * b)
     )(1)(2)
-    const expected = List(action('+', 3), action('*', 2))t
+    const expected = List(action('+', 3), action('*', 2))
     assert.deepEqual(actual, expected)
   })
 })
