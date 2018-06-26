@@ -3,15 +3,12 @@
  */
 
 /**
- * A curried function that takes in an Action and a State and returns a new Action
+ * A function that takes in an Action and a State and returns a new Action
  * @param  action
  * @param  state
  * @return action
  */
-import {CurriedFunction2} from 'ts-curry'
 
-export type CommandFunction<Input, State, Output> = CurriedFunction2<
-  Action<Input>,
-  State,
-  Action<Output>
->
+export type CommandFunction<Input, State, Output> = {
+  (input: Input, state: State): Action<Output>
+}
