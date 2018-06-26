@@ -7,3 +7,5 @@
 export {ReducerFunction} from './src/ReducerFunction'
 export {CommandFunction} from './src/CommandFunction'
 export {concatR} from './src/concatR'
+export {matchC} from './src/matchC'
+export {matchR} from './src/matchR'
