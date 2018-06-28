@@ -3,16 +3,17 @@
  */
 
 import {Nil} from 'action-type'
-import {curry2} from 'ts-curry'
+import {CurriedFunction2, curry2} from 'ts-curry'
 import {CommandFunction} from './CommandFunction'
 
 export type MatchActionCSpec<State> = {
   [key: string]: CommandFunction<any, State, any>
 }
 
-export const matchC = <State>(spec: MatchActionCSpec<State>) => {
-  return curry2((action: Action<any>, state: State) => {
+export const matchC = <State>(
+  spec: MatchActionCSpec<State>
+): CurriedFunction2<Action<any>, State, Action<any>> =>
+  curry2((action: Action<any>, state: State) => {
     if (spec[action.type]) return spec[action.type](action.value, state)
     return Nil
   })
-}

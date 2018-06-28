@@ -1,5 +1,3 @@
-///<reference path="./node_modules/action-type/global.d.ts"/>
-
 /**
  * Created by tushar on 25/06/18
  */
