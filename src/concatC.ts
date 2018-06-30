@@ -2,7 +2,7 @@
  * Created by tushar on 26/06/18
  */
 
-import {List} from 'action-type'
+import {List, Action} from 'action-type'
 import {CommandFunction} from './CommandFunction'
 import {CurriedFunction2, curry2} from 'ts-curry'
 

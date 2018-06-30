@@ -2,7 +2,7 @@
  * Created by tushar on 25/06/18
  */
 import {curry2} from 'ts-curry'
-import {action} from 'action-type'
+import {action, Action} from 'action-type'
 import * as assert from 'assert'
 import {concatR} from '../src/concatR'
 
