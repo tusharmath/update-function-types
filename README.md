@@ -51,10 +51,11 @@ export type CommandFunction<Value, State, Output> = {
 
 Takes in multiple `ReducerFunction`(s) as arguments and returns a new `ReducerFunction` as a result.
 
-Consider the `ReducerFunction`(s) `R0` `R1` then two statements will be logically equivalent —
-
-1.  `concatR(R0, R1)(action, state)`
-2.  `R1(action, R0(action, state))`
+1.  Consider the `ReducerFunction`(s) `R0` `R1` then two statements will be logically equivalent —
+    1.  `concatR(R0, R1)(action, state)`
+    2.  `R1(action, R0(action, state))`
+2.  Its associative — `concatR(concatR(R0, R1), R2) === concatR(R0, concatR(R1, R2))`
+3.  Its additive — `concatR(R0, I) === R0` where `I` is a `ReducerFunction` that returns the state as is.
 
 **Usage**
 
@@ -70,10 +71,12 @@ concatR(R0, R1)(10, 20) // 10 * (10 + 20) === 300
 ## concatC
 
 Takes in multiple `CommandFunction`(s) as arguments and returns a new `CommandFunction` as a result.
-Consider the `CommandFunction`(s) `C0` `C1` then two statements will be logically equivalent —
 
-1.  `concatC(C0, C1)(action, state)`
-2.  `List(C0(action, state), C1(action, state))`
+1.  Consider the `CommandFunction`(s) `C0` `C1` then two statements will be logically equivalent —
+    1.  `concatC(C0, C1)(action, state)`
+    2.  `List(C0(action, state), C1(action, state))`
+2.  Its associative — `concatC(concatC(C0, C1), C2) === concatC(C0, concatC(C1, C2))`
+3.  Its additive — `concatC(C0, Z) === C0` where `Z` is a command function that returns [Nil]
 
 **Usage**
 
