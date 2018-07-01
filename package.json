@@ -38,7 +38,7 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
-    "action-type": "^3.0.1",
+    "action-type": "^3.1.0",
     "ts-curry": "^1.0.0"
   }
 }

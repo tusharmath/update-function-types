@@ -109,11 +109,11 @@ JSONStream@^1.0.4:
     jsonparse "^1.2.0"
     through ">=2.2.7 <3"
 
-action-type@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/action-type/-/action-type-3.0.1.tgz#366d072a38079b4de736fef30128f22847dc0529"
+action-type@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/action-type/-/action-type-3.1.0.tgz#ee293bc40e1d907ac04e306b2d1df76b26e042ac"
   dependencies:
-    ts-curry "^1.0.0"
+    ts-curry "^1.0.2"
 
 agent-base@4, agent-base@^4.1.0:
   version "4.2.0"
@@ -3117,7 +3117,7 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-ts-curry@^1.0.0:
+ts-curry@^1.0.0, ts-curry@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/ts-curry/-/ts-curry-1.0.2.tgz#62d0f2b3e54fb3cddfabd841ba8a90fbf8ca6ffd"
 
