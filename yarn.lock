@@ -109,9 +109,9 @@ JSONStream@^1.0.4:
     jsonparse "^1.2.0"
     through ">=2.2.7 <3"
 
-action-type@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/action-type/-/action-type-2.0.0.tgz#780cca0b1c794fb4b61b691d95d27f6513f16274"
+action-type@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/action-type/-/action-type-3.0.1.tgz#366d072a38079b4de736fef30128f22847dc0529"
   dependencies:
     ts-curry "^1.0.0"
 
