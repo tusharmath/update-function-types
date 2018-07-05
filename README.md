@@ -55,7 +55,7 @@ Takes in multiple `ReducerFunction`(s) as arguments and returns a new `ReducerFu
     1.  `concatR(R0, R1)(action, state)`
     2.  `R1(action, R0(action, state))`
 2.  Its associative — `concatR(concatR(R0, R1), R2) === concatR(R0, concatR(R1, R2))`
-3.  Its additive — `concatR(R0, I) === R0` where `I` is a `ReducerFunction` that returns the state as is.
+3.  Its additive — `concatR(R0, zeroR) === R0`.
 
 **Usage**
 
@@ -76,7 +76,7 @@ Takes in multiple `CommandFunction`(s) as arguments and returns a new `CommandFu
     1.  `concatC(C0, C1)(action, state)`
     2.  `List(C0(action, state), C1(action, state))`
 2.  Its associative — `concatC(concatC(C0, C1), C2) === concatC(C0, concatC(C1, C2))`
-3.  Its additive — `concatC(C0, Z) === C0` where `Z` is a command function that returns [Nil]
+3.  Its additive — `concatC(C0, zeroC) === C0`
 
 **Usage**
 
@@ -128,3 +128,13 @@ const reducer = matchR({
 
 reducer(action('add', 10), 1000) // returns action('added', 1010)
 ```
+
+## zeroR
+
+1.  Is a `ReducerFunction`.
+2.  Takes in an `action` and a `state` and returns the same state.
+
+## zeroC
+
+1.  Is a `CommandFunction`.
+2.  Takes in an `action` and a `state` and returns the same `action`.
