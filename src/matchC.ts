@@ -13,7 +13,7 @@ export type MatchActionCSpec<State> = {
 export const matchC = <State>(
   spec: MatchActionCSpec<State>
 ): CurriedFunction2<Action<any>, State, Action<any>> =>
-  curry2((action: Action<any>, state: State) => {
-    if (spec[action.type]) return spec[action.type](action.value, state)
-    return Nil
-  })
+  curry2(
+    (action: Action<any>, state: State) =>
+      spec[action.type] ? spec[action.type](action.value, state) : Nil
+  )
