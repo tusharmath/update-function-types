@@ -16,6 +16,8 @@ Essentially there are two kinds of update functions —
   - [concatC](#concatc)
   - [matchR](#matchr)
   - [matchC](#matchc)
+  - [zeroR](#zeror)
+  - [zeroC](#zeroc)
 
 # Types
 
