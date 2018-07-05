@@ -6,12 +6,12 @@ import * as assert from 'assert'
 import {concatC} from '../src/concatC'
 import {action, List, Nil} from 'action-type'
 import {curry2} from 'ts-curry'
+import {zeroC} from '../src/zeroC'
 
 describe('concatC', () => {
   const P = (a: number, b: number) => action('+', a + b)
   const M = (a: number, b: number) => action('*', a * b)
   const D = (a: number, b: number) => action('/', a / b)
-  const Z = () => Nil
   it('should combine multiple command functions into one', () => {
     const actual = concatC(curry2(P), curry2(M))(1, 2)
     const expected = List(action('+', 3), action('*', 2))
@@ -33,13 +33,13 @@ describe('concatC', () => {
   })
 
   it('should satisfy additive identity P + Z === P', () => {
-    const a = concatC(P, Z)
+    const a = concatC(P, zeroC)
     const b = P
     assert.deepEqual(a(1, 2), b(1, 2))
   })
 
   it('should satisfy additive identity Z + Z === Z', () => {
-    const actual = concatC(Z, Z)(1, 2)
+    const actual = concatC(zeroC, zeroC)(1, 2)
     const expected = Nil
     assert.deepEqual(actual, expected)
   })
