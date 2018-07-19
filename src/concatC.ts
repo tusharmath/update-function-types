@@ -21,7 +21,7 @@ export const concatC = <Input, State, Output>(
     }
 
     return result.length === 0
-      ? Nil
+      ? Nil()
       : result.length === 1
         ? result[0]
         : List(...result)

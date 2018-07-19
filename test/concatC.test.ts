@@ -40,7 +40,7 @@ describe('concatC', () => {
 
   it('should satisfy additive identity Z + Z === Z', () => {
     const actual = concatC(zeroC, zeroC)(1, 2)
-    const expected = Nil
+    const expected = Nil()
     assert.deepEqual(actual, expected)
   })
 })

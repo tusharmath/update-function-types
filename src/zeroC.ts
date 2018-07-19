@@ -8,4 +8,4 @@ import {curry2} from 'ts-curry'
 export const zeroC: {
   <T>(action: any, state: T): Action<any>
   <T>(action: any): {(state: T): Action<any>}
-} = curry2((action: any, state: any) => Nil)
+} = curry2((action: any, state: any) => Nil())

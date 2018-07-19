@@ -4,9 +4,9 @@
 
 import * as assert from 'assert'
 import {matchC} from '../src/matchC'
-import {action, Nil} from 'action-type'
+import {action, isNil} from 'action-type'
 
-describe('matchR', () => {
+describe('matchC', () => {
   it('should call the matching command function', () => {
     const actual = matchC({
       add: (a: number, b: number) => action('added', a + b),
@@ -23,7 +23,7 @@ describe('matchR', () => {
       mul: (a: number, b: number) => action('multiplied', a * b)
     })(action('div', 10), 20)
 
-    assert.strictEqual(actual, Nil)
+    assert.ok(isNil(actual))
   })
 
   it('should be curried', () => {

@@ -15,5 +15,5 @@ export const matchC = <State>(
 ): CurriedFunction2<Action<any>, State, Action<any>> =>
   curry2(
     (action: Action<any>, state: State) =>
-      spec[action.type] ? spec[action.type](action.value, state) : Nil
+      spec[action.type] ? spec[action.type](action.value, state) : Nil()
   )
